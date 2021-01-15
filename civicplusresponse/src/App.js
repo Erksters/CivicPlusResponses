@@ -1,23 +1,54 @@
-import logo from './logo.svg';
 import './App.css';
+import Response1 from './components/Response1/Response1';
+import Slider from 'react-input-slider';
+import { useState } from 'react';
+import {Row, Col} from 'reactstrap'
+import FadeInSection from './components/FadeInObject/FadeInObject';
 
 function App() {
+  const [sliderValue, setSliderValue] = useState(26)
+  const [SubHeaderValue, setSubHeaderValue] = useState(32)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="homepage">
+    <Row>
+      <Col></Col>
+      <Col xs={7}>
+        <Row>
+          <Col style={{textAlign:'right'}}>
+             <label className="label-fontsize">Adjust Font Size &nbsp;</label>
+          </Col>
+          <Col>
+            <Slider 
+              className="Slider"
+              axis="x"
+              x={sliderValue}
+              xstep={1}
+              xmin={16}
+              xmax={32}
+              onChange={({x}) =>{
+                setSliderValue(x);
+                setSubHeaderValue(x + 6)
+                }}
+            />
+          </Col>  
+        </Row>
+        
+        <FadeInSection >
+          <h3 style={{fontSize: `${SubHeaderValue.toString()}px`}}>Response 1</h3>
+          <Response1 sliderFontSize={`${sliderValue.toString()}px`} />
+        </FadeInSection>
+
+        <FadeInSection >
+          <h3 style={{fontSize: `${SubHeaderValue.toString()}px`}}>Response 2</h3>
+          <Response1 sliderFontSize={`${sliderValue.toString()}px`} />
+        </FadeInSection>
+        
+        
+      </Col>
+      <Col></Col>
+    </Row>      
+      
     </div>
   );
 }
