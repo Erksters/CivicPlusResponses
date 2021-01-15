@@ -1,5 +1,6 @@
 import './App.css';
 import Response1 from './components/Response1/Response1';
+import Response2 from './components/Response2/Response2';
 import Slider from 'react-input-slider';
 import { useState } from 'react';
 import {Row, Col} from 'reactstrap'
@@ -41,7 +42,7 @@ function App() {
 
         <FadeInSection >
           <h3 style={{fontSize: `${SubHeaderValue.toString()}px`}}>Response 2</h3>
-          <Response1 sliderFontSize={`${sliderValue.toString()}px`} />
+          <Response2 sliderFontSize={`${sliderValue.toString()}px`} />
         </FadeInSection>
         
         
