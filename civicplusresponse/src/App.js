@@ -7,6 +7,7 @@ import FadeInSection from './components/FadeInObject/FadeInObject';
 
 function App() {
   const [sliderValue, setSliderValue] = useState(26)
+  const [SubHeaderValue, setSubHeaderValue] = useState(32)
 
   return (
     <div className="homepage">
@@ -15,7 +16,7 @@ function App() {
       <Col xs={7}>
         <Row>
           <Col style={{textAlign:'right'}}>
-             <label className="label-fontsize">Font Size &nbsp;</label>
+             <label className="label-fontsize">Adjust Font Size &nbsp;</label>
           </Col>
           <Col>
             <Slider 
@@ -26,15 +27,23 @@ function App() {
               xmin={16}
               xmax={32}
               onChange={({x}) =>{
-                setSliderValue(x)
+                setSliderValue(x);
+                setSubHeaderValue(x + 6)
                 }}
             />
           </Col>  
         </Row>
-        <FadeInSection ><Response1 sliderFontSize={`${sliderValue.toString()}px`} /></FadeInSection>
-        <FadeInSection ><Response1 sliderFontSize={`${sliderValue.toString()}px`} /></FadeInSection>
-        <FadeInSection ><Response1 sliderFontSize={`${sliderValue.toString()}px`} /></FadeInSection>
-        <FadeInSection ><Response1 sliderFontSize={`${sliderValue.toString()}px`} /></FadeInSection>
+        
+        <FadeInSection >
+          <h3 style={{fontSize: `${SubHeaderValue.toString()}px`}}>Response 1</h3>
+          <Response1 sliderFontSize={`${sliderValue.toString()}px`} />
+        </FadeInSection>
+
+        <FadeInSection >
+          <h3 style={{fontSize: `${SubHeaderValue.toString()}px`}}>Response 2</h3>
+          <Response1 sliderFontSize={`${sliderValue.toString()}px`} />
+        </FadeInSection>
+        
         
       </Col>
       <Col></Col>
