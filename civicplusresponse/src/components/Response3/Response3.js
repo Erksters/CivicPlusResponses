@@ -1,11 +1,12 @@
-import React, { useCallback } from 'react';
-import { MDBIcon } from "mdbreact";
-import { SayButton } from 'react-say';
-
+import React from 'react';
+import MaryText from './MaryText';
+import PlayAudio from './PlayAudio';
 import "./Response3.css";
 
 const Response3 = props => {
     const {sliderFontSize} = props;
+
+    
     var text = `
     Good morning Mary. Thank you for calling CivicPlus as we’re always happy to help our Clients. 
     I sincerely apologize for what happened in your prior phone call with us,
@@ -35,19 +36,11 @@ const Response3 = props => {
         Do we have any video tutorials on this? Such as a Youtube channel dedicated to customer support?
     `
 
-    const selector = useCallback(voices => [...voices].find(v => v.lang === 'en-GB'), []);
-
     return(
         <div>
             <br/>
-            
-            <SayButton
-                rate={1}
-                voice={selector}
-                speak={text6}
-            >
-                Listen to Mary's technical problems <MDBIcon icon="volume-up" />
-            </SayButton>
+                <PlayAudio />
+                <MaryText sliderFontSize={sliderFontSize}/>
 
             <br/>
             <br/>
