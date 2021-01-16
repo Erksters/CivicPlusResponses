@@ -1,11 +1,12 @@
-import React, { useCallback } from 'react';
-import { MDBIcon } from "mdbreact";
-import { SayButton } from 'react-say';
-
+import React from 'react';
+import MaryText from './MaryText';
+import PlayAudio from './PlayAudio';
 import "./Response3.css";
 
 const Response3 = props => {
     const {sliderFontSize} = props;
+
+    
     var text = `
     Good morning Mary. Thank you for calling CivicPlus as we’re always happy to help our Clients. 
     I sincerely apologize for what happened in your prior phone call with us,
@@ -35,24 +36,25 @@ const Response3 = props => {
         Do we have any video tutorials on this? Such as a Youtube channel dedicated to customer support?
     `
 
-    const selector = useCallback(voices => [...voices].find(v => v.lang === 'en-GB'), []);
-
     return(
         <div>
-            <SayButton
-                classname="Coolness"
-                rate={1}
-                voice={selector}
-                speak={text6}
-            >
-                Listen to Mary's technical problems <MDBIcon icon="volume-up" />
-            </SayButton>
+            <br/>
+                <PlayAudio />
+                <MaryText sliderFontSize={sliderFontSize}/>
+
+            <br/>
+            <br/>
+            
             <p style={{fontSize: sliderFontSize}}> {text}</p>
             <p style={{fontSize: sliderFontSize}}> {text2}</p>
             <p style={{fontSize: sliderFontSize}}> {text3}</p>
-            <p style={{fontSize: sliderFontSize, fontStyle:"italic", textAlign:'center'}}> {text4}</p>
+            <br/>
+            <p className="skinny" style={{fontSize: sliderFontSize}}> {text4}</p>
+            <br/>
             <p style={{fontSize: sliderFontSize}}> {text5}</p>
-            <p style={{fontSize: sliderFontSize, fontStyle:"italic", textAlign:'center'}}> {text6}</p>
+            <br/>
+            <p className="skinny" style={{fontSize: sliderFontSize}}> {text6}</p>
+
         </div>
     );
 }
