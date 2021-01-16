@@ -39,20 +39,29 @@ const Response3 = props => {
 
     return(
         <div>
+            <br/>
+            
             <SayButton
-                classname="Coolness"
                 rate={1}
                 voice={selector}
                 speak={text6}
             >
                 Listen to Mary's technical problems <MDBIcon icon="volume-up" />
             </SayButton>
+
+            <br/>
+            <br/>
+            
             <p style={{fontSize: sliderFontSize}}> {text}</p>
             <p style={{fontSize: sliderFontSize}}> {text2}</p>
             <p style={{fontSize: sliderFontSize}}> {text3}</p>
-            <p style={{fontSize: sliderFontSize, fontStyle:"italic", textAlign:'center'}}> {text4}</p>
+            <br/>
+            <p className="skinny" style={{fontSize: sliderFontSize}}> {text4}</p>
+            <br/>
             <p style={{fontSize: sliderFontSize}}> {text5}</p>
-            <p style={{fontSize: sliderFontSize, fontStyle:"italic", textAlign:'center'}}> {text6}</p>
+            <br/>
+            <p className="skinny" style={{fontSize: sliderFontSize}}> {text6}</p>
+
         </div>
     );
 }
