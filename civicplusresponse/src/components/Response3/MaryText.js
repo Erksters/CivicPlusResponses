@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Collapse } from "reactstrap";
 
-
-
 const MaryText = props => {
     const {sliderFontSize} = props;
 
@@ -18,7 +16,6 @@ const MaryText = props => {
    so us older folk can still get a grip on these types of things.
    `
 
-
    return(
        <>
             <button 
@@ -27,8 +24,7 @@ const MaryText = props => {
                 View Mary's Transcript
             </button>
             <Collapse isOpen={collOpen} style={{ fontSize:sliderFontSize}} >{MarysComplaint}</Collapse>
-       </>
-    
+       </>    
    )
 }
 
