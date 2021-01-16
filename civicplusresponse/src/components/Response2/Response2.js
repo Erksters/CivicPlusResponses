@@ -21,18 +21,20 @@ const Response2 = props => {
         }
     return(
         <div>
+            
             <p style={{fontSize: sliderFontSize}}> {text}</p>
-            <p style={{fontSize: sliderFontSize}}> {text2}</p>
             <div>
                 <Row>
-                    <Col><Button className="Buttons" onClick={()=>{handleColorChange('#007BFF')}} style={{backgroundColor:'#007BFF', fontWeight:500}} color="black" >Try Me!</Button></Col>
-                    <Col><Button onClick={()=>{handleColorChange('whitesmoke')}} style={{backgroundColor:'whitesmoke' , fontWeight:500,  borderStyle:'solid', borderColor:'black'}} color="black" >Try Me!</Button></Col>
-                    <Col><Button onClick={()=>{handleColorChange('red')}} style={{backgroundColor:'red' , fontWeight:500}} color="black" >Try Me!</Button></Col>
-                    <Col><Button onClick={()=>{handleColorChange('green')}} style={{backgroundColor:'green' , fontWeight:500}} color="black" >Try Me!</Button></Col>
+                    <Col><button className="Buttons" onClick={()=>{handleColorChange('#007BFF')}} style={{backgroundColor:'#007BFF'}} color="black" >Try Me!</button></Col>
+                    <Col><button className="Buttons" onClick={()=>{handleColorChange('red')}} style={{backgroundColor:'red' }} color="black" >Try Me!</button></Col>
+                    <Col><button className="Buttons" onClick={()=>{handleColorChange('green')}} style={{backgroundColor:'green' }} color="black" >Try Me!</button></Col>
+                    <Col><button className="Buttons" onClick={()=>{handleColorChange('whitesmoke')}} style={{backgroundColor:'whitesmoke' ,  borderStyle:'solid', borderColor:'black'}} color="black" >Try Me!</button></Col>
                 </Row>
 
                 <ColoredBox myColor={currentColor} />
             </div>
+            <p style={{fontSize: sliderFontSize}}> {text2}</p>
+            
         </div>
     );
 }

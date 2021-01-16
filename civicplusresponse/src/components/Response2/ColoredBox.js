@@ -12,11 +12,7 @@ const ColoredBox = props => {
                         
                          href="https://www.google.com/">Visit Google.com</a>
                     </Col>
-                    <Col>
-                        <a className="anchors" 
-                        style={{color:'whitesmoke'}}
-                        href="https://www.google.com/">Visit Google.com</a>
-                    </Col>
+                    
                     <Col>
                         <a className="anchors"
                             style={{color:'red'}}
@@ -26,6 +22,11 @@ const ColoredBox = props => {
                         <a className="anchors"
                             style={{color:'green'}}
                             href="https://www.google.com/">Visit Google.com</a>
+                    </Col>
+                    <Col>
+                        <a className="anchors" 
+                        style={{color:'whitesmoke'}}
+                        href="https://www.google.com/">Visit Google.com</a>
                     </Col>
                 </Row>
             
