@@ -1,6 +1,7 @@
 import './App.css';
 import Response1 from './components/Response1/Response1';
 import Response2 from './components/Response2/Response2';
+import Response3 from './components/Response3/Response3';
 import Slider from 'react-input-slider';
 import { useState } from 'react';
 import {Row, Col} from 'reactstrap'
@@ -39,10 +40,15 @@ function App() {
           <h3 style={{fontSize: `${SubHeaderValue.toString()}px`}}>Response 1</h3>
           <Response1 sliderFontSize={`${sliderValue.toString()}px`} />
         </FadeInSection>
-
+        <br/>
         <FadeInSection >
           <h3 style={{fontSize: `${SubHeaderValue.toString()}px`}}>Response 2</h3>
           <Response2 sliderFontSize={`${sliderValue.toString()}px`} />
+        </FadeInSection>
+        <br/>
+        <FadeInSection >
+          <h3 style={{fontSize: `${SubHeaderValue.toString()}px`}}>Response 3</h3>
+          <Response3 sliderFontSize={`${sliderValue.toString()}px`} />
         </FadeInSection>
         
         
