@@ -1,4 +1,3 @@
-import './App.css';
 import Response1 from './components/Response1/Response1';
 import Response2 from './components/Response2/Response2';
 import Response3 from './components/Response3/Response3';
@@ -6,7 +5,8 @@ import Slider from 'react-input-slider';
 import { useState } from 'react';
 import {Row, Col} from 'reactstrap'
 import FadeInSection from './components/FadeInObject/FadeInObject';
-import MobileWarning from './components/MobileWarning/MobileWarning';
+import MobileWarningAlert from './components/MobileWarning/MobileWarningAlert';
+import './App.css';
 
 function App() {
   const [sliderValue, setSliderValue] = useState(26)
@@ -63,7 +63,7 @@ function App() {
 
       {/* Mobile */}
       <div className="d-lg-none">      
-      <MobileWarning />
+      <MobileWarningAlert />
         <Col>
           <Row>
             <Col style={{textAlign:'right'}}>
