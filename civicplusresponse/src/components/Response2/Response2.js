@@ -21,8 +21,9 @@ const Response2 = props => {
         }
     return(
         <div>
-            
             <p style={{fontSize: sliderFontSize}}> {text}</p>
+            <p style={{fontSize: sliderFontSize}}> {text2}</p>
+            <br/>
             <div>
                 <Row>
                     <Col><button className="Buttons" onClick={()=>{handleColorChange('#007BFF')}} style={{backgroundColor:'#007BFF'}} color="black" >Try Me!</button></Col>
@@ -32,8 +33,8 @@ const Response2 = props => {
                 </Row>
 
                 <ColoredBox myColor={currentColor} />
+                <br/>
             </div>
-            <p style={{fontSize: sliderFontSize}}> {text2}</p>
             
         </div>
     );

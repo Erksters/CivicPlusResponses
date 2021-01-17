@@ -14,7 +14,7 @@ const Response3 = props => {
          `
 
     var text2 = `I assure you that the applications you are looking for still exist. They were moved to a different location.
-     On my end, I see that you currently have 10 applications in you Archived Bin.
+     On my end, I see that you currently have 10 applications in your Archived Bin.
       What we’re going to do today is get your applications out of the Archived Bin 
       and take note on how to prevent this issue from happening again.
         `;
