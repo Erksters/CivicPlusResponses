@@ -54,7 +54,7 @@ const Response3 = props => {
             <p style={{fontSize: sliderFontSize}}> {text5}</p>
             <br/>
             <p className="skinny" style={{fontSize: sliderFontSize}}> {text6}</p>
-
+            <br/><br/><br/>
         </div>
     );
 }
